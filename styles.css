@@ -142,12 +142,16 @@ h3 {
 
 .hero-lead {
   max-width: 680px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   color: #342f42;
   font-size: clamp(1.35rem, 2.4vw, 2rem);
   font-weight: 500;
   letter-spacing: -0.018em;
-  line-height: 1.36;
+  line-height: 1.22;
+}
+
+.hero-text {
+  line-height: 1.48;
 }
 
 .hero-text,
@@ -155,7 +159,7 @@ h3 {
 .contact p {
   color: var(--muted);
   font-size: 1.02rem;
-  line-height: 1.82;
+  line-height: 1.68;
 }
 
 .hero-actions {
@@ -222,7 +226,12 @@ h3 {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 56px;
+  align-items: start;
   border-top: 1px solid var(--line);
+}
+
+.split .section-body {
+  padding-top: 38px;
 }
 
 .section-heading {
@@ -232,10 +241,18 @@ h3 {
   margin-bottom: 34px;
 }
 
+#research .section-heading {
+  max-width: 900px;
+}
+
+#research {
+  border-top: 1px solid var(--line);
+}
+
 .interest-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .interest-card,
@@ -258,7 +275,7 @@ h3 {
 .timeline-item p,
 .clean-list p {
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.62;
 }
 
 .paper-list {
@@ -274,10 +291,54 @@ h3 {
   padding: 24px;
 }
 
+.paper-more {
+  display: grid;
+  gap: 16px;
+}
+
+.paper-more summary {
+  display: inline-flex;
+  justify-self: start;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.paper-more summary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(48, 36, 92, 0.1);
+}
+
+.paper-more summary::marker,
+.paper-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-more .hide-label {
+  display: none;
+}
+
+.paper-more[open] .show-label {
+  display: none;
+}
+
+.paper-more[open] .hide-label {
+  display: inline;
+}
+
 .muted {
   color: var(--muted);
   font-size: 0.94rem;
-  line-height: 1.65;
+  line-height: 1.58;
 }
 
 .inline-links,
@@ -298,6 +359,10 @@ h3 {
 }
 
 .timeline-section {
+  border-top: 1px solid var(--line);
+}
+
+#papers {
   border-top: 1px solid var(--line);
 }
 
@@ -377,6 +442,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .split .section-body {
+    padding-top: 0;
+  }
+
   .hero {
     min-height: auto;
     padding-top: 42px;
@@ -441,7 +510,7 @@ body {
   font-family: "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   color: #1f2937;
   background: #f8fafc;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 a {
